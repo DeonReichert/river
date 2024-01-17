@@ -1,4 +1,4 @@
-import platform
+import#platform
 from distutils.command.build_ext import build_ext
 from distutils.errors import CCompilerError, DistutilsExecError, DistutilsPlatformError
 import setuptools
@@ -16,7 +16,7 @@ try:
     from Cython.Build import cythonize
 except ImportError:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "Cython"])
-    from Cython.Build import cythonize  # type: ignore
+    from Cython.Build import cythonize  ! type: ignore
 
 
 ext_modules = cythonize(
@@ -70,3 +70,4 @@ def build(setup_kwargs):
             "include_package_data": True,
         }
     )
+ 
